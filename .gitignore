@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+media/       # Ignore uploaded music and cover images
+
+# Virtual environment
+venv/
+.env
+
+# VS Code
+.vscode/
+
+# Node / Frontend
+node_modules/
+build/
+dist/
+
+# Mac / Linux / Windows system files
+.DS_Store
+Thumbs.db

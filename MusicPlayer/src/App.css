@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Lavishly+Yours&display=swap');
+/* its for logo */
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Lavishly+Yours&display=swap');
+/* its for heading  Musiclisth1*/
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Kablammo&family=Lavishly+Yours&display=swap');
+/* for play button */
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+/* its for other all */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+overflow-y: auto;
+    /* allow vertical scroll */
+    overflow-x: hidden;}
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+/* For Firefox */
+body {
+    scrollbar-width: none;
+    /* hides scrollbar */
+    -ms-overflow-style: none;
+    /* IE 10+ */
+    background-image: url("./images/wallpaper.jpg");
+    background-size: cover;
+        /* Ensures the image covers the entire background */
+        background-repeat: no-repeat;
+        /* Prevents the image from repeating */
+        background-position: center center;
+        color: whitesmoke;
+}
+:root{
+    --main-grad:repeating-linear-gradient(135deg,
+            rgba(144, 255, 200, 0.76) 0%,
+            /* teal-green start */
+            rgba(130, 245, 220, 0.76) 6%,
+            rgba(115, 240, 235, 0.76) 12%,
+            rgba(100, 230, 255, 0.76) 18%,
+            /* cyan */
+            rgba(110, 245, 210, 0.76) 24%,
+            rgba(120, 255, 180, 0.76) 30%,
+            /* light green */
+            rgba(140, 255, 165, 0.76) 36%,
+            rgba(155, 255, 150, 0.76) 42%,
+            rgba(170, 255, 150, 0.76) 48%,
+            /* soft green */
+            rgba(180, 220, 170, 0.76) 54%,
+            /* muted green */
+            rgba(190, 200, 180, 0.76) 60%,
+            rgba(200, 180, 190, 0.76) 66%,
+            /* lilac transition */
+            rgba(215, 160, 200, 0.76) 72%,
+            rgba(230, 130, 210, 0.76) 75%,
+            /* soft pink */
+            rgba(245, 115, 220, 0.76) 79%,
+            rgba(255, 100, 221, 0.76) 83%,
+            rgba(255, 80, 230, 0.76) 87%,
+            /* magenta */
+            rgba(220, 100, 255, 0.76) 91%,
+            /* violet */
+            rgba(180, 130, 255, 0.63) 95%,
+            /* soft blue */
+            rgba(144, 255, 200, 0.76) 100%
+            /* same as start for seamless loop */
+        );
+}
+/* .body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: var(--main-grad);
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+    animation: moveGradient 30s linear infinite;
+} */
+
+/* @keyframes moveGradient {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%);
+    }
+} */
+#musiclist{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+    gap:1.5vw;
+}
+.musiclistcards{
+    /* border:2px solid blue; */
+    padding: 5px;
+    width:16vw;
+    height:45vh;
+    
+    
+}
+.musiccard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border: 3px solid black;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px;
+    border-radius: 35px 25px 80px 50px;
+    font-family: "Kablammo", cursive;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 20px;
+    box-shadow: 0px 0px 20px yellow;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.musiccard::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: var(--main-grad);
+    border-radius: inherit;
+    animation: moveGradient 3s linear infinite alternate;
+    z-index: 0;
+}
+@keyframes moveGradient {
+    0% {
+        /* Start position (0% and 100% are now the two extremes of the movement) */
+        transform: translate(0, 0);
+    }
+
+    100% {
+        /* End position - the animation runs to here, then reverses automatically */
+        transform: translate(-25%, -25%);
+    }
+}
+/* .musiccard::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-repeat: repeat;
+    background-size: 100% 100%;
+    z-index: -1;
+} */
+.cover-wrapper {
+    width: 90%;
+    height: 60%;
+    perspective: 1000px;
+    margin: auto;
+    position: relative;
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    position: relative;
+    transform-style: preserve-3d;
+    /* animation: flip 4s linear 2s infinite; */
+    animation: flip 60s linear infinite;
+}
+
+.cover {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    object-fit: cover;
+    object-position: center;
+    backface-visibility: hidden;
+    border: 1px solid rgb(12,12,12);
+}
+
+.cover-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background: linear-gradient(135deg,
+        rgba(255,100,221,0.85),
+        rgba(230,130,210,0.85),
+        rgba(180,130,255,0.85)
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateY(0deg);
+        /* front */
+    }
+    30%{
+        transform: rotateY(0deg);
+            /* front */
+    }
+    40% {
+        transform: rotateY(180deg);
+        /* back */
+    }
+
+    50% {
+        transform: rotateY(180deg);
+        /* stay on back for reading */
+    }
+    90%{
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+        /* front again */
+    }
+}
+
+
+
+/* ! navbar start  */
+
+#navbarul{
+    display :flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:40vw;
+    list-style-type:none;
+    border-bottom: 2px solid white;
+    border-radius: 10px;
+    margin-left :1vw;
+    margin-right: 2vw;
+    padding: 0px;
+    background: rgba(0, 0, 0, 0.4);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(6px);
+        position: sticky;
+        z-index: 1;
+}
+#navbarul li{
+    text-decoration: none;
+}
+#logo{
+    font-size:7vh;
+    font-weight: bolder;
+    font-style: italic;
+font-family: "Lavishly Yours", cursive;
+padding-left: 1vw;
+text-shadow: 0px 0px 10px whitesmoke;
+}
+
+#searchnav{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:2vw;
+}
+.btnnav{
+    border: 0px solid black; 
+    border-radius: 15px;
+    padding:3px 10px;
+    font-family: "Lavishly Yours";
+        font-weight: 900;
+        font-style: normal;
+        font-size: 4vh;
+    /* background: linear-gradient(to right, rgb(0, 204, 255), rgb(0, 174, 255)); */
+    background: transparent;
+    margin: 0px;
+    display: flex;
+        align-items: center;
+        justify-content: center;
+}
+#home::before {
+    content: 'home';
+    /* The icon name as text */
+    font-family: 'Material Symbols Outlined';
+    /* The correct font family */
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 800,
+        'GRAD' 0,
+        'opsz' 40;
+    /* Adjust optical size as needed, e.g., 40 */
+    font-size: 4vh;
+    /* Match or adjust icon size relative to text */
+    color: white;
+    /* Icon color */
+    /* margin-right: 5px; */
+    /* Space between icon and button text */
+    /* Ensure the icon is treated as a single unit */
+    display: inline-block;
+    background: transparent;
+        border: 0px;
+}
+#searchbtn::before {
+    content: 'search_check';
+    /* The icon name as text */
+    font-family: 'Material Symbols Outlined';
+    /* The correct font family */
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 800,
+        'GRAD' 0,
+        'opsz' 40;
+    /* Match the optical size of the #home icon */
+    font-size: 4vh;
+    /* Match the icon size to the button's font size */
+    color: white;
+    /* Icon color */
+    /* margin-right: 5px; */
+    /* Space between icon and button text */
+    display: inline-block;
+    background: transparent;
+    border: 0px;
+}
+#PhotoAlbum::before {
+    content: 'Photo_Album';
+    /* The icon name as text */
+    font-family: 'Material Symbols Outlined';
+    /* The correct font family */
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 800,
+        'GRAD' 0,
+        'opsz' 40;
+    /* Match the optical size of the #home icon */
+    font-size: 4vh;
+    /* Match the icon size to the button's font size */
+    color: white;
+    /* Icon color */
+    /* margin-right: 5px; */
+    /* Space between icon and button text */
+    display: inline-block;
+    background: transparent;
+    border: 0px;
+}
+.inputnav{
+    border: 1px solid rgb(240, 235, 235);
+        border-radius: 15px;
+padding: 0px 8px;
+        font-family: "Lavishly Yours", cursive;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 4vh;
+        width:20vw;
+        /* background: linear-gradient(to right, rgb(0, 204, 255), rgb(0, 174, 255)); */
+        background: transparent;
+        color: white;
+}
+.inputnav:focus{
+    color: white;
+    border: 0px solid rgba(255, 255, 255, 0.397);
+    outline: none;
+    outline: 1px solid white;
+}
+.inputnav::placeholder{
+    color: rgba(255, 255, 255, 0.489);
+}
+#search{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5vw;
+}
+
+/* !nabarend */
+
+.Musiclisth1{
+    text-align:center;
+    font-family: "Barriecito", cursive;
+        /* font-weight: 400; */
+        font-style: normal;
+        font-size:8vh;
+        text-shadow: 0px 0px 10px yellow;
+}
+.caption{
+    font-family: "Lavishly Yours", cursive;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 13px;
+        z-index: 1;
+}
+.musiccard header{
+    font-size:16px;
+    z-index: 1;
+}
+.playbutton{
+    font-family: "Lavishly Yours", cursive;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 10px;
+        padding: 0px;
+        background: transparent;
+        border: 0px;
+        z-index: 1;
+}
+.playbutton::before {
+    content: 'play_circle';
+    /* icon name as text */
+    font-family: 'Material Symbols Outlined';
+    font-variation-settings:
+        'FILL' 0,
+        /* outlined */
+        'wght' 800,
+        /* weight */
+        'GRAD' 0,
+        /* gradient */
+        'opsz' 48;
+    /* optical size */
+    font-size: 30px;
+    /* size */
+    color: #0c0c0c;
+    /* color */
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nofav {
+    text-align: center;
+    font-size: 2.5vh;
+    color: #ccc;
+    margin-top: 5vh;
+}

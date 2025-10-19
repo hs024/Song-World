@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Shape of You",
+    "writer": "Ed Sheran",
+    "musicLocation": "./music/Shape Of You.mp3",
+    "cover": "./images/shapeofyou.jpeg"
+  },
+  {
+    "id": 2,
+    "title": "Hunter for Dream",
+    "writer": "Galnerious",
+    "musicLocation": "./music/Hunter x Hunter Ending 2 - Hunting for your dream_default.mp3",
+    "cover": "./images/hunter X hunter.jpeg"
+  },
+  {
+    "id": 3,
+    "title": "Middle of Night",
+    "writer": "elly Duhe",
+    "musicLocation": "./music/Middle Of The Night (PenduJatt.Com.Se).mp3",
+    "cover": "./images/middleofnight.jpeg"
+  },
+  {
+    "id":4 ,
+    "title": "Everything at once",
+    "writer": "Mar one",
+    "musicLocation": "./music/m-a-r-_one_lenka-everything-at-once.mp3",
+    "cover": "./images/everything.jpeg"
+  }
+  ,{
+    "id":5 ,
+    "title": "Mann mera",
+    "writer": "Gajendra",
+    "musicLocation": "./music/Mann Mera Table No. 21 128 Kbps.mp3",
+    "cover": "./images/mannmera.jpeg"
+  }
+,
+{
+    "id":6 ,
+    "title": "Alone pt II",
+    "writer": "Alan walker",
+    "musicLocation": "./music/Alan_Walker_ft_Ava_Max_-_Alone_Pt_II.mp3",
+    "cover": "./images/alonept2.jpeg"
+  },
+  {
+    "id":7,
+    "title": "Judas",
+    "writer": "lady gaga",
+    "musicLocation": "./music/judas.mp3",
+    "cover": "./images/judas.png"
+  }
+
+
+]
+
+
