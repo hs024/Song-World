@@ -7,12 +7,13 @@
     "cover": "./images/shapeofyou.jpeg"
   },
   {
-    "id": 2,
-    "title": "Hunter for Dream",
-    "writer": "Galnerious",
-    "musicLocation": "./music/Hunter x Hunter Ending 2 - Hunting for your dream_default.mp3",
-    "cover": "./images/hunter X hunter.jpeg"
+    "id":6 ,
+    "title": "Alone pt II",
+    "writer": "Alan walker",
+    "musicLocation": "./music/Alan_Walker_ft_Ava_Max_-_Alone_Pt_II.mp3",
+    "cover": "./images/alonept2.jpeg"
   },
+  
   {
     "id": 3,
     "title": "Middle of Night",
@@ -36,11 +37,11 @@
   }
 ,
 {
-    "id":6 ,
-    "title": "Alone pt II",
-    "writer": "Alan walker",
-    "musicLocation": "./music/Alan_Walker_ft_Ava_Max_-_Alone_Pt_II.mp3",
-    "cover": "./images/alonept2.jpeg"
+    "id": 2,
+    "title": "Hunter for Dream",
+    "writer": "Galnerious",
+    "musicLocation": "./music/Hunter x Hunter Ending 2 - Hunting for your dream_default.mp3",
+    "cover": "./images/hunter X hunter.jpeg"
   },
   {
     "id":7,

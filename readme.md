@@ -19,7 +19,7 @@ A full-stack music player with **React frontend** and **Django REST backend**.
 
 ## 🎬 Demo
 
-[![Watch Demo](/MusicPlayer/public/demo.png)](/MusicPlayer/public/SongWorld_video.mp4)  
+[![Watch Demo](/MusicPlayer/public/demo.png)](/MusicPlayer/public/MusicWorld_video.mp4)  
 Click the image to view the video demo.
 
 ---
